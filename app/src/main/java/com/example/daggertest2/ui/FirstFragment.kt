@@ -10,6 +10,7 @@ import com.example.daggertest2.viewModel.FirstViewModel
 import com.example.daggertest2.R
 import com.example.daggertest2.di.DaggerAppComponent
 import com.example.daggertest2.model.Car
+import com.example.daggertest2.model.Engine
 import javax.inject.Inject
 
 
@@ -20,8 +21,10 @@ class FirstFragment : Fragment() {
     }
 
     private lateinit var viewModel: FirstViewModel
-    @Inject
-    lateinit var car: Car
+
+   // lateinit var car: Car
+   @Inject
+    lateinit var engin: Engine
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,7 +38,8 @@ class FirstFragment : Fragment() {
 
         val carComponent = DaggerAppComponent.create()
         carComponent.inject(this)
-        car.drive()
+        //car.drive()
+        engin.enginType()
     }
 
 }
