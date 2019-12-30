@@ -1,7 +1,8 @@
-package com.example.daggertest2
+package com.example.daggertest2.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.daggertest2.R
 
 class MainActivity : AppCompatActivity() {
 

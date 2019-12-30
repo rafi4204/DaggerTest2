@@ -1,4 +1,4 @@
-package com.example.daggertest2
+package com.example.daggertest2.ui
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.daggertest2.viewModel.FirstViewModel
+import com.example.daggertest2.R
 import com.example.daggertest2.di.DaggerAppComponent
 import com.example.daggertest2.model.Car
 import javax.inject.Inject

@@ -12,8 +12,5 @@ class CarModule {
     fun provideWheel(): Wheel = Wheel()
 
     @Provides
-    fun provideEngine(): Engine = Engine()
-
-    @Provides
     fun providesCar(engine:Engine,wheel :Wheel): Car = Car(engine,wheel)
 }
