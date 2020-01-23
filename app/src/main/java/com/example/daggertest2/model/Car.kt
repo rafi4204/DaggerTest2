@@ -1,9 +1,10 @@
 package com.example.daggertest2.model
 
 import android.util.Log
+import javax.inject.Inject
 
 
-class Car(engine: Engine, wheel: Wheel) {
+class Car @Inject constructor(engine: Engine, wheel: Wheel)   {
 
     val TAG = "Car"
 
