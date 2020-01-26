@@ -2,12 +2,17 @@ package com.example.daggertest2.di.module
 
 import com.example.daggertest2.model.DiselEngine
 import com.example.daggertest2.model.Engine
-import dagger.Binds
 import dagger.Module
-import javax.inject.Inject
+import dagger.Provides
 
 @Module
-abstract class DiselEngineModule {
-    @Binds
-    abstract fun bindDiselEngine(diselEngine: DiselEngine): Engine
+class DiselEngineModule(private var horsePower: Int) {
+
+    fun DiselEngineModule(horsePower: Int){
+        this.horsePower=horsePower
+    }
+    @Provides
+    fun providesDiselEngine():Engine{
+        return DiselEngine(horsePower)
+    }
 }
