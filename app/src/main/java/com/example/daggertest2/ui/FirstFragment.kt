@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.example.daggertest2.viewModel.FirstViewModel
 import com.example.daggertest2.R
 import com.example.daggertest2.di.DaggerAppComponent
+import com.example.daggertest2.di.module.DiselEngineModule
 import com.example.daggertest2.model.Car
 import com.example.daggertest2.model.Engine
 import javax.inject.Inject
@@ -36,7 +37,7 @@ class FirstFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(FirstViewModel::class.java)
 
-        val carComponent = DaggerAppComponent.create()
+        val carComponent = DaggerAppComponent.builder().diselEngineModule(DiselEngineModule(100)).build()
         carComponent.inject(this)
         //car.drive()
         engin.enginType()
