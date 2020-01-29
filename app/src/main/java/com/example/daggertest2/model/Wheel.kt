@@ -6,6 +6,6 @@ import javax.inject.Inject
 class Wheel  {
 
     fun brand(){
-        Log.d("2","Wheel brand is = Toyota")
+        Log.d("2","Wheel brand is =toyo")
     }
 }
